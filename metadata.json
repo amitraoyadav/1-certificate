@@ -1,0 +1,6 @@
+{
+  "name": "RAOZ LEGAL SAMPLE",
+  "description": "Independent legal and advocate website library and recreation platform featuring complete multi-page legal website modules.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

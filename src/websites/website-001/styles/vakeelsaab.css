@@ -1,0 +1,102 @@
+.vakeelsaab-root {
+  font-family: 'Hanken Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+  color: #172B54;
+  background-color: #ffffff;
+}
+
+.vakeelsaab-root .pattern-bg {
+  background-image: url('/websites/website-001/images/legal-pattern.webp');
+  background-repeat: repeat;
+  background-size: 400px;
+  position: relative;
+}
+
+.vakeelsaab-root .pattern-bg::before {
+  content: "";
+  pointer-events: none;
+  z-index: 1;
+  background-color: rgba(255, 255, 255, 0.95);
+  position: absolute;
+  inset: 0;
+}
+
+.vakeelsaab-root .pattern-bg > * {
+  z-index: 2;
+  position: relative;
+}
+
+.vakeelsaab-root .section-headline {
+  margin-bottom: 1rem;
+  display: inline-block;
+  position: relative;
+}
+
+.vakeelsaab-root .section-headline::after {
+  content: "";
+  background-color: #FEC556;
+  border-radius: 2px;
+  width: 60px;
+  height: 4px;
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@keyframes vs-marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.vakeelsaab-root .marquee {
+  width: max-content;
+  display: flex;
+  animation: 22s linear infinite vs-marquee;
+}
+
+.vakeelsaab-root .marquee:hover {
+  animation-play-state: paused;
+}
+
+@media (max-width: 639px) {
+  .vakeelsaab-root .marquee {
+    flex-wrap: wrap;
+    justify-content: center;
+    animation: none;
+    width: 100%;
+  }
+}
+
+@keyframes vs-wave-1 {
+  0% {
+    opacity: 0.4;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.35);
+  }
+}
+
+@keyframes vs-wave-2 {
+  0% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.55);
+  }
+}
+
+.vakeelsaab-root .animate-wave-1 {
+  animation: 2s infinite vs-wave-1;
+}
+
+.vakeelsaab-root .animate-wave-2 {
+  animation: 2.5s 0.3s infinite vs-wave-2;
+}
